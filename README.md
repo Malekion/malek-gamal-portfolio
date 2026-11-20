@@ -2,6 +2,8 @@
 
 Personal portfolio of Malek Gamal, Senior Operations Executive and Stage Manager in the MENA esports scene.
 
+**Live site:** https://malekion.github.io/malek-gamal-portfolio/ (GitHub Pages, served from `main`)
+
 - `index.html` — the website (single static page, no build step)
 - `malek-gamal-portfolio.pdf` — the same content as a 16:9 PDF deck
 - `img/` — event photos
