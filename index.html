@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Malek Gamal — Esports Operations</title>
-<meta name="description" content="Malek Gamal, Senior Operations Executive and Stage Manager. Operations for Egypt's biggest esports events: ESS, MPL MENA, Cairo ICT Connecta Play, Insomnia, Red Bull.">
-<meta property="og:title" content="Malek Gamal — Esports Operations">
+<title>Malek Gamal — Operations</title>
+<meta name="description" content="Malek Gamal, Senior Operations Executive and Stage Manager in Cairo. Operations for ESS, MPL Season 9, Connecta Play, Insomnia, QABDA and Red Bull.">
+<meta property="og:title" content="Malek Gamal — Operations">
 <meta property="og:description" content="Senior Operations Executive & Stage Manager. From truck load-in to the last trophy lift.">
-<meta property="og:image" content="img/hero-leaderboard.jpg">
+<meta property="og:image" content="img/mpl-arena.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 :root{
   --bg:#08090e; --bg2:#0f1119; --card:#131623; --line:#232838;
   --text:#eef0f6; --muted:#9aa1b5; --dim:#6b7186;
-  --cyan:#3fe3ff; --pink:#ff3e9d; --go:#3dff8f;
+  --cyan:#3fe3ff; --pink:#ff3e9d;
   --radius:18px; --wrap:1180px;
   --head:"Space Grotesk",system-ui,sans-serif;
   --body:"Inter",system-ui,sans-serif;
@@ -33,9 +33,9 @@ a{color:inherit}
 h1,h2,h3{font-family:var(--head);line-height:1.08;letter-spacing:-.02em}
 h2{font-size:clamp(32px,4.4vw,52px);margin:14px 0 18px}
 h3{font-size:22px}
-p.lead{color:var(--muted);font-size:18px;max-width:640px}
 section{padding:96px 0;border-top:1px solid var(--line)}
 .only-print{display:none}
+.lg{height:18px;width:auto;filter:invert(1);opacity:.85;display:inline-block;vertical-align:middle}
 
 /* nav */
 nav{position:sticky;top:0;z-index:20;background:rgba(8,9,14,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -49,162 +49,139 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .btn.ghost{background:transparent;color:var(--text)!important;border:1px solid var(--line)}
 
 /* hero */
-.hero{padding:72px 0 80px;border-top:0;position:relative}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.standby{display:flex;gap:10px;margin-bottom:22px}
-.standby span{padding:6px 12px;border:1px solid var(--line);border-radius:999px}
-.standby .go{color:var(--go);border-color:rgba(61,255,143,.4);box-shadow:0 0 18px rgba(61,255,143,.15)}
-.hero h1{font-size:clamp(52px,7.6vw,96px)}
+.hero{padding:64px 0 80px;border-top:0}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(56px,8vw,104px)}
 .hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-.role{font-family:var(--head);font-size:clamp(18px,2vw,22px);color:var(--text);margin:18px 0 14px}
-.hero p.lead{margin-bottom:28px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
+.role{font-family:var(--head);font-size:clamp(20px,2.2vw,26px);margin:18px 0 10px}
+.hero .sub{color:var(--muted);font-size:17px;max-width:520px}
+.contact-big{display:grid;gap:12px;margin-top:30px;max-width:520px}
+.contact-big a{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:16px;background:var(--card);border:1px solid var(--line);text-decoration:none;font-family:var(--head);font-size:clamp(18px,2vw,22px);font-weight:600}
+.contact-big a:hover{border-color:var(--cyan)}
+.contact-big svg{width:22px;height:22px;flex:none;color:var(--cyan)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.facts span{font-size:14px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);color:#c9cede}
 .hero-photo{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:58% 40%}
 .tag{position:absolute;left:16px;bottom:16px;background:rgba(8,9,14,.78);backdrop-filter:blur(6px);border:1px solid var(--line);padding:10px 14px;border-radius:12px}
 .tag b{display:block;font-family:var(--head);font-size:15px}
 .tag small{color:var(--muted);font-size:12px}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:8px}
-.stat{background:var(--bg2);padding:26px 22px}
-.stat b{display:block;font-family:var(--head);font-size:clamp(30px,3.4vw,42px);line-height:1;color:var(--cyan)}
+/* numbers */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.stat{background:var(--bg2);padding:28px 26px}
+.stat b{display:block;font-family:var(--head);font-size:clamp(36px,4vw,52px);line-height:1;color:var(--cyan)}
 .stat:nth-child(even) b{color:var(--pink)}
-.stat span{display:block;color:var(--muted);font-size:14px;margin-top:10px}
-.brands{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.brands span{font-family:var(--head);font-weight:600;font-size:15px;padding:10px 16px;border:1px solid var(--line);border-radius:999px;color:#c9cede;background:var(--bg2)}
+.stat span{display:block;color:var(--muted);font-size:15px;margin-top:10px}
+.clients-title{font-family:var(--head);font-size:22px;margin:44px 0 18px}
+.clients{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.client{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:104px;border:1px solid var(--line);border-radius:14px;background:var(--bg2)}
+.client img{height:36px;width:auto;filter:invert(1);opacity:.9}
+.client img[src*="redbull"],.client img[src*="kfc"]{height:50px;margin:-7px 0}
+.client img[data-wm]{height:72px;margin:-18px 0}
+.ic .lg[data-wm]{height:28px}
+.chip .lg[data-wm]{height:26px;margin:-6px 0}
+.client b{font-family:var(--head);font-weight:700;font-size:20px;letter-spacing:-.01em;color:#e3e6ef}
+.client small{font-size:12px;color:var(--dim)}
 .note{color:var(--dim);font-size:12.5px;margin-top:14px}
 
-/* about */
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-.about-photo{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3}
-.about-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 40%}
-.about p{color:var(--muted);margin-bottom:14px}
-.about p strong{color:var(--text);font-weight:600}
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px}
-.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.step .mono{color:var(--pink)}
-.step h3{margin:10px 0 8px;font-size:20px}
-.step p{color:var(--muted);font-size:14.5px}
-.vendors{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.vendors span{font-size:12.5px;padding:4px 10px;border-radius:999px;background:rgba(63,227,255,.08);color:var(--cyan);border:1px solid rgba(63,227,255,.25)}
+/* what */
+.what{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.what-photo{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5}
+.what-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.kw{display:flex;flex-wrap:wrap;gap:10px}
+.kw span{font-family:var(--head);font-weight:600;font-size:clamp(16px,1.6vw,19px);padding:10px 16px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
+.kw span.hl{background:linear-gradient(90deg,rgba(63,227,255,.16),rgba(255,62,157,.16));border-color:rgba(63,227,255,.5);color:#fff}
+.kw span.big{font-size:clamp(22px,2.4vw,30px);padding:12px 20px}
+.langs{margin-top:22px;color:var(--muted);font-size:15px}
+.langs b{color:var(--text);font-weight:600}
 
 /* cases */
-.cases{display:grid;gap:22px;margin-top:40px}
-.case{display:grid;grid-template-columns:1.25fr .75fr;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
-.case.flip{grid-template-columns:.75fr 1.25fr}
+.cases{display:grid;gap:22px;margin-top:36px}
+.case{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
 .case.flip .case-body{order:2}
-.case-body{padding:34px}
-.case-media{position:relative;min-height:300px;background:var(--bg2)}
+.case-body{padding:34px;display:flex;flex-direction:column;justify-content:center}
+.case-media{position:relative;min-height:340px;background:var(--bg2)}
 .case-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.case-media.text{display:flex;flex-direction:column;justify-content:flex-end;padding:30px;background:
-  radial-gradient(120% 90% at 100% 0%,rgba(255,62,157,.28),transparent 60%),
-  radial-gradient(120% 90% at 0% 100%,rgba(63,227,255,.25),transparent 60%),var(--bg2)}
-.case-media.text b{font-family:var(--head);font-size:64px;line-height:1}
-.case-media.text span{color:var(--muted);margin-top:8px}
-.case .meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}
-.chip{font-size:12.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:#c9cede}
-.chip.role{border-color:rgba(255,62,157,.45);color:var(--pink);font-family:var(--body);font-size:12.5px;margin:0}
-.case h3{font-size:clamp(24px,2.6vw,32px)}
-.case ul{list-style:none;display:grid;gap:8px;margin-top:6px}
+.yr{font-family:var(--mono);font-size:13px;color:var(--cyan);letter-spacing:.1em}
+.case h3{font-size:clamp(26px,2.8vw,34px);margin-top:6px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 16px}
+.chip{font-size:12.5px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:#c9cede;display:inline-flex;align-items:center;gap:7px}
+.chip.role{border-color:rgba(255,62,157,.45);color:var(--pink)}
+.chip .lg{height:15px}
+.case ul{list-style:none;display:grid;gap:8px}
 .case li{color:var(--muted);padding-left:20px;position:relative;font-size:15px}
 .case li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:2px;background:var(--cyan)}
-.kpis{display:flex;gap:28px;flex-wrap:wrap;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
-.kpis div b{display:block;font-family:var(--head);font-size:28px;color:var(--text)}
-.kpis div span{font-size:12.5px;color:var(--dim)}
-
-/* story */
-.story{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:40px}
-.story-photo{position:relative;min-height:420px}
-.story-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.story-body{background:var(--card);padding:40px}
-.sar{display:grid;gap:18px;margin-top:22px}
-.sar div{border-left:2px solid var(--line);padding-left:16px}
-.sar div:last-child{border-color:var(--go)}
-.sar .mono{color:var(--dim)}
-.sar div:last-child .mono{color:var(--go)}
-.sar p{color:var(--muted);margin-top:4px}
-.sar p strong{color:var(--text)}
+.kpis{display:flex;gap:30px;flex-wrap:wrap;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.kpis b{display:block;font-family:var(--head);font-size:32px;line-height:1.1}
+.kpis span{font-size:12.5px;color:var(--dim)}
+.brandbar{position:absolute;left:16px;top:16px;display:flex;gap:10px}
+.brandbar span{display:flex;align-items:center;gap:8px;background:rgba(8,9,14,.8);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600}
+.brandbar .lg{height:18px}
 
 /* more */
-.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
-.col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
-.col h3{font-size:20px;margin:8px 0 14px}
+.lead-line{display:flex;align-items:center;gap:14px;margin:6px 0 30px;font-family:var(--head);font-size:clamp(18px,2vw,22px)}
+.lead-line b{color:var(--pink);font-size:clamp(28px,3vw,38px)}
+.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.col.feature{grid-column:span 2;border-color:rgba(63,227,255,.4)}
+.col.feature .items{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px}
+.col h3{font-size:22px;margin:6px 0 10px}
 .col .mono{color:var(--cyan)}
-.item{padding:12px 0;border-top:1px solid var(--line)}
-.item:first-of-type{border-top:0}
-.item b{font-weight:600;display:block}
-.item span{color:var(--muted);font-size:14.5px}
+.item{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.item .ic{width:30px;height:30px;flex:none;border-radius:8px;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:700;font-size:12px;color:#c9cede}
+.item .ic .lg{height:16px;opacity:.95}
+.item b{font-weight:600;font-size:15px;flex:1}
+.item i{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--dim)}
 
 /* camera */
-.camera{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
-.cam{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
-.cam .mono{color:var(--pink)}
-.cam-img{margin:-28px -28px 20px;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line)}
+.camera{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.cam{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;overflow:hidden}
+.cam-img{margin:-24px -24px 18px;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line)}
 .cam-img img{width:100%;height:100%;object-fit:cover}
-.cam{overflow:hidden}
-.cam h3{margin:10px 0 8px}
-.cam p{color:var(--muted);font-size:15px}
-.ar{font-family:"Inter",system-ui;direction:rtl;unicode-bidi:isolate}
+.cam .mono{color:var(--pink)}
+.cam h3{margin:8px 0 4px}
+.ar{direction:rtl;unicode-bidi:isolate}
 
 /* gallery */
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px;margin-top:40px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px;margin-top:36px}
 .gallery figure{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
 .gallery img{width:100%;height:100%;object-fit:cover}
 .gallery figcaption{position:absolute;left:10px;bottom:10px;font-size:12px;background:rgba(8,9,14,.75);padding:4px 9px;border-radius:8px;color:#d6d9e4}
 .g-wide{grid-column:span 2}
 .g-tall{grid-row:span 2}
 
-/* timeline */
-.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:44px;position:relative}
-.timeline::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--pink))}
-.t{padding-right:20px;position:relative}
-.t::before{content:"";display:block;width:20px;height:20px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan);margin-bottom:18px}
-.t:nth-child(even)::before{border-color:var(--pink)}
-.t .mono{color:var(--dim)}
-.t h3{font-size:18px;margin:6px 0 6px}
-.t p{color:var(--muted);font-size:14px}
-
-/* skills */
-.skills{display:grid;grid-template-columns:1.4fr .6fr;gap:18px;margin-top:40px}
-.pills{display:flex;flex-wrap:wrap;gap:10px}
-.pills span{padding:9px 15px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:14.5px}
-.langs div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}
-.langs span{color:var(--muted)}
-
 /* contact */
 .contact{text-align:center;padding:120px 0}
 .contact h2{font-size:clamp(40px,6vw,76px)}
-.contact p.lead{margin:0 auto 30px}
-.contact .cta{justify-content:center}
+.contact .contact-big{margin:30px auto 0}
+.contact .facts{justify-content:center}
 footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-/* responsive */
 @media screen and (max-width:960px){
-  .hero .wrap,.about,.story,.skills{grid-template-columns:1fr}
-  .case,.case.flip{grid-template-columns:1fr}
+  .hero .wrap,.what{grid-template-columns:1fr}
+  .case{grid-template-columns:1fr}
   .case.flip .case-body{order:0}
-  .case-media{min-height:240px}
+  .case-media{min-height:260px}
   .stats{grid-template-columns:repeat(2,1fr)}
-  .stats .stat:last-child{grid-column:span 2}
-  .flow,.camera{grid-template-columns:1fr 1fr}
+  .clients{grid-template-columns:repeat(3,1fr)}
+  .camera{grid-template-columns:1fr 1fr}
   .grid4{grid-template-columns:1fr}
-  .timeline{grid-template-columns:1fr;gap:22px}
-  .timeline::before{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--cyan),var(--pink))}
-  .t{padding-left:38px;padding-right:0}
-  .t::before{position:absolute;left:0;top:2px;margin:0}
+  .col.feature{grid-column:auto}
+  .col.feature .items{grid-template-columns:1fr}
   .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
   .links a:not(.btn){display:none}
   .hero-photo{aspect-ratio:4/3}
+  .what-photo{aspect-ratio:4/3}
 }
 @media screen and (max-width:560px){
   .wrap{padding:0 16px}
   section{padding:72px 0}
-  .flow,.camera{grid-template-columns:1fr}
-  .case-body,.story-body{padding:24px}
+  .camera{grid-template-columns:1fr}
+  .case-body{padding:24px}
   .gallery{grid-auto-rows:140px}
-  .g-wide{grid-column:span 2}
+  .contact-big a{font-size:17px;padding:14px 16px}
 }
 
 /* print / PDF: one 16:9 page per block */
@@ -213,30 +190,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   html,body{background:var(--bg);-webkit-print-color-adjust:exact;print-color-adjust:exact}
   nav,.no-print{display:none!important}
   .only-print{display:revert}
-  section,.hero{border:0;padding:56px 0;min-height:810px;break-before:page;break-inside:avoid}
+  section,.hero{border:0;padding:40px 0;min-height:810px;break-before:page;break-inside:avoid}
   .hero{break-before:auto;display:flex;align-items:center}
   .hero .wrap{width:100%}
-  .hero-photo{aspect-ratio:auto;height:640px}
+  .hero-photo{aspect-ratio:auto;height:680px}
   .wrap{max-width:1320px;padding:0 64px}
-  section{padding:40px 0}
-  .case{break-inside:avoid;break-before:page;height:690px;margin-top:0}
-  .cases{gap:0;margin-top:24px}
-  .cases .case:first-child{break-before:auto;height:500px}
-  #shows h2{margin:8px 0 6px}
-  .about-photo{aspect-ratio:auto;height:380px}
-  .flow{margin-top:28px}
-  .step{padding:18px}
-  .grid4{grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
-  .col{break-inside:avoid}
-  .col{padding:20px}
-  .item{padding:8px 0}
-  .item span{font-size:12.5px;line-height:1.4}
-  .item b{font-size:14px}
-  .col h3{margin:4px 0 6px}
-  #more h2,#gallery h2{margin:8px 0 4px}
+  .clients-title{margin:28px 0 14px}
+  .client{height:88px}
+  .what-photo{aspect-ratio:auto;height:640px}
+  .case{break-inside:avoid;break-before:page;height:690px}
+  .cases{gap:0;margin-top:20px}
+  .cases .case:first-child{break-before:auto;height:540px}
+  #events h2{margin:8px 0 6px}
+  .grid4{gap:14px}
+  .col{padding:18px;break-inside:avoid}
+  .item{padding:5px 0}
+  #more .col h3{display:none}
+  #more .col .mono{display:block;margin-bottom:6px}
+  .item .ic{width:26px;height:26px}
+  .lead-line{margin:0 0 16px}
+  #more h2,#gallery h2{margin:6px 0 4px}
+  #more{padding:28px 0}
   .gallery{grid-auto-rows:92px;margin-top:16px;gap:10px}
-  #more,#gallery{padding:28px 0}
-  #more .lead,#more .cue{display:none}
+  #gallery{padding:28px 0}
   .camera{margin-top:24px}
 }
 </style>
@@ -247,9 +223,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap">
     <a class="mark" href="#top">Malek<span>.</span>Gamal</a>
     <div class="links">
-      <a href="#shows">Shows</a>
-      <a href="#field">On the floor</a>
-      <a href="#path">Career</a>
+      <a href="#what">What I do</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
       <a class="btn" href="malek-gamal-portfolio.pdf" download>Download PDF</a>
     </div>
@@ -259,218 +235,203 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <div class="standby mono"><span>Standby</span><span class="go">Go</span></div>
       <h1>Malek<br><em>Gamal</em></h1>
       <p class="role">Senior Operations Executive · Stage Manager</p>
-      <p class="lead">I run the floor at Egypt's biggest esports events, from the first truck at load-in to the last trophy lift. Four years at FWZ (Gamers Lounge) delivering shows for Riot Games, Moonton, Red Bull, Samsung and Vodafone.</p>
-      <div class="cta no-print">
-        <a class="btn" href="#shows">See the shows</a>
-        <a class="btn ghost" href="malek-gamal-portfolio.pdf" download>Download PDF</a>
+      <p class="sub">I run the floor at Egypt's biggest gaming and live events, from the first truck at load-in to the last trophy lift.</p>
+      <div class="contact-big">
+        <a href="tel:+201064665480"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+20 106 466 5480</a>
+        <a href="mailto:ra3d21000@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>ra3d21000@gmail.com</a>
       </div>
-      <p class="mono hero-contact" style="color:var(--muted);margin-top:22px;line-height:1.9;text-transform:none;letter-spacing:.02em"><a href="mailto:ra3d21000@gmail.com" style="text-decoration:none">ra3d21000@gmail.com</a> · <a href="tel:+201064665480" style="text-decoration:none">+20 106 466 5480</a><span class="only-print"> · linkedin.com/in/malek-gamal-091933367</span></p>
+      <div class="facts"><span>Born July 1997</span><span>Cairo, Egypt</span><span class="only-print">linkedin.com/in/malek-gamal-091933367</span></div>
     </div>
     <div class="hero-photo">
-      <img src="img/hero-leaderboard.jpg" alt="Malek Gamal on comms in front of a live tournament leaderboard">
-      <div class="tag"><b>On comms, show day</b><small>Live leaderboard, stage floor</small></div>
+      <img src="img/mpl-arena.jpg" alt="Malek Gamal on the arena floor at the MPL Season 9 Grand Finals">
+      <div class="tag"><b>MPL Season 9 Grand Finals</b><small>Arena floor, Hassan Mostafa Sports Hall · 2026</small></div>
     </div>
   </div>
 </header>
 
 <section id="numbers">
   <div class="wrap">
-    <span class="cue mono">Cue 01 · By the numbers</span>
-    <h2>Big rooms, real crowds.</h2>
+    <span class="cue mono">Cue 01</span>
+    <h2>Numbers talk.</h2>
     <div class="stats">
-      <div class="stat"><b>4+ yrs</b><span>Operations at FWZ (Gamers Lounge)</span></div>
-      <div class="stat"><b>25+</b><span>Events, tournaments and brand activations</span></div>
-      <div class="stat"><b>10–120</b><span>Crew led per event, smallest to largest</span></div>
-      <div class="stat"><b>11,000</b><span>Visitors at ESS 2026, two days</span></div>
-      <div class="stat"><b>3,000</b><span>Sold-out seats, MPL MENA S9 Grand Finals</span></div>
+      <div class="stat"><b>4+ yrs</b><span>Delivering for the brands below</span></div>
+      <div class="stat"><b>150+</b><span>People led on a single event</span></div>
+      <div class="stat"><b>100+</b><span>People hired and staffed</span></div>
+      <div class="stat"><b>25+</b><span>Events, tournaments and activations</span></div>
+      <div class="stat"><b>11,000</b><span>Visitors at ESS 2026</span></div>
+      <div class="stat"><b>3,000</b><span>Sold-out seats, MPL Season 9 Finals</span></div>
     </div>
-    <div class="brands">
-      <span>Riot Games</span><span>Moonton</span><span>Red Bull</span><span>Samsung</span><span>Vodafone</span><span>Orange</span><span>Intel</span><span>KFC</span><span>Call of Duty</span><span>PUBG Mobile</span><span>VALORANT</span><span>Cairo ICT</span><span>Insomnia</span>
+    <p class="clients-title">4+ years delivering for</p>
+    <div class="clients">
+      <div class="client"><img src="img/logos/redbull.svg" alt=""><small>Red Bull</small></div>
+      <div class="client"><img src="img/logos/riotgames.svg" alt=""><small>Riot Games</small></div>
+      <div class="client"><img src="img/logos/samsung.svg" alt="" data-wm><small>Samsung</small></div>
+      <div class="client"><img src="img/logos/vodafone.svg" alt=""><small>Vodafone</small></div>
+      <div class="client"><img src="img/logos/orange.svg" alt=""><small>Orange</small></div>
+      <div class="client"><img src="img/logos/intel.svg" alt="" data-wm><small>Intel</small></div>
+      <div class="client"><img src="img/logos/amd.svg" alt="" data-wm><small>AMD</small></div>
+      <div class="client"><img src="img/logos/pubg.svg" alt=""><small>PUBG · Krafton</small></div>
+      <div class="client"><b>Tencent</b><small>PUBG Mobile</small></div>
+      <div class="client"><b>MOONTON</b><small>Mobile Legends</small></div>
+      <div class="client"><img src="img/logos/kfc.svg" alt=""><small>KFC</small></div>
+      <div class="client"><img src="img/logos/activision.svg" alt="" data-wm><small>Call of Duty</small></div>
     </div>
-    <p class="note">Attendance and reach figures are the events' published totals, from organiser and press reports.</p>
+    <p class="note">Event figures: organiser and press reports.</p>
   </div>
 </section>
 
-<section id="about">
+<section id="what">
   <div class="wrap">
-    <div class="about">
-      <div class="about-photo"><img src="img/profile-side.jpg" alt="Malek Gamal wearing a production headset"></div>
+    <div class="what">
+      <div class="what-photo"><img src="img/profile-side.jpg" alt="Malek Gamal wearing a production headset"></div>
       <div>
-        <span class="cue mono">Cue 02 · About</span>
-        <h2>The person on the headset.</h2>
-        <p>I'm an operations lead and stage manager in the MENA esports scene. My job is to make a show <strong>run on time, safely, and on budget</strong>: crews, vendors, run-of-show, crowd flow and the hundred small calls in between.</p>
-        <p>I've run everything from a 10-person campus booth to a <strong>120-person arena production</strong> at Hassan Mostafa Sports Hall. Before FWZ I co-founded <strong>Atlas Coworking Space</strong>, which taught me the business side: budgets, suppliers and keeping customers happy.</p>
+        <span class="cue mono">Cue 02</span>
+        <h2>What can I do?</h2>
+        <div class="kw">
+          <span class="hl big">Production</span><span class="hl big">Ushering</span><span class="hl big">Team management</span>
+          <span class="hl">Pricing &amp; quotations</span><span class="hl">Execution</span><span class="hl">Supervision</span><span class="hl">Stage management</span>
+          <span>LED screens</span><span>Lighting</span><span>Sound</span><span>Power</span><span>Transport &amp; logistics</span>
+          <span>Vendor coordination</span><span>Run-of-show</span><span>Crowd control</span><span>Venue management</span>
+          <span>Tournament supervision</span><span>Stream directing</span><span>Crisis management</span><span>Hospitality</span><span>Budgets</span><span>ERP</span>
+        </div>
+        <p class="langs"><b>Arabic</b> native · <b>German</b> B2</p>
       </div>
     </div>
-    <div class="flow">
-      <div class="step"><span class="mono">01 · Plan</span><h3>Scope &amp; budget</h3><p>Floor plans, crew lists, schedules and a run-of-show everyone signs off on.</p></div>
-      <div class="step"><span class="mono">02 · Build</span><h3>Vendors &amp; load-in</h3><p>Booking and coordinating every supplier until the venue is show-ready.</p>
-        <div class="vendors"><span>Sound</span><span>Lighting</span><span>Transport</span><span>Power</span></div></div>
-      <div class="step"><span class="mono">03 · Run</span><h3>Show day</h3><p>Stage management, cues, talent, crowd control and fixing problems before anyone notices them.</p></div>
-      <div class="step"><span class="mono">04 · Strike</span><h3>Wrap &amp; report</h3><p>Safe load-out, vendor sign-off and lessons learned for the next show.</p></div>
-    </div>
   </div>
 </section>
 
-<section id="shows">
+<section id="events">
   <div class="wrap">
-    <span class="cue mono">Cue 03 · Flagship shows</span>
-    <h2>Shows I ran.</h2>
-    <p class="lead">The biggest rooms I've stood in, and what I was responsible for there.</p>
-
+    <span class="cue mono">Cue 03</span>
+    <h2>Events I ran.</h2>
     <div class="cases">
 
       <article class="case">
         <div class="case-body">
-          <span class="mono" style="color:var(--dim)">Sept 2026 · Hassan Mostafa Sports Hall, Cairo</span>
+          <span class="yr">2026 · Hassan Mostafa Sports Hall</span>
           <h3>ESS 2026, Esports Summit</h3>
-          <div class="meta"><span class="chip role">Operations lead</span><span class="chip role">Stage manager</span><span class="chip">6th edition</span></div>
+          <div class="meta"><span class="chip role">Operations lead</span><span class="chip role">Stage manager</span></div>
           <ul>
-            <li>Ran operations for Egypt's largest esports event across two show days.</li>
-            <li>Stage-managed both show days, including the Red Bull Wheel Clutch, the Red Bull FC Creators Showmatch and the League of Legends Master Cup.</li>
+            <li>Ran operations for Egypt's largest esports event.</li>
             <li>Coordinated the sound, lighting, transport and power suppliers from load-in to strike.</li>
-            <li>ESS sets were built to a standard that got the event used as a filming location for the TV drama <em>Midterm</em>.</li>
           </ul>
-          <div class="kpis"><div><b>11,000</b><span>visitors in two days</span></div><div><b>55M+</b><span>digital views</span></div><div><b>2</b><span>roles: ops + stage</span></div></div>
+          <div class="kpis"><div><b>11,000</b><span>visitors in 2 days</span></div><div><b>55M+</b><span>digital views</span></div></div>
         </div>
-        <div class="case-media"><img src="img/ess-trophy.jpg" alt="Red Bull Wheel Clutch Egypt winners trophy on the ESS 2026 stage"></div>
+        <div class="case-media"><img src="img/ess-trophy.jpg" alt="Red Bull Wheel Clutch trophy on the ESS 2026 stage"></div>
       </article>
 
       <article class="case flip">
         <div class="case-body">
-          <span class="mono" style="color:var(--dim)">May 2026 · Hassan Mostafa Sports Hall, Cairo</span>
-          <h3>MPL MENA Season 9 Grand Finals</h3>
+          <span class="yr">2026 · Hassan Mostafa Sports Hall</span>
+          <h3>MPL Season 9 Grand Finals</h3>
           <div class="meta"><span class="chip role">Operations lead</span><span class="chip role">Stage manager</span><span class="chip">Mobile Legends · Moonton</span></div>
           <ul>
-            <li>Ran operations for MPL MENA's first ticketed event in Egypt.</li>
-            <li>Stage-managed the Grand Finals in front of a sold-out arena: broadcast cues, team walk-ins and the awarding ceremony.</li>
-            <li>A live show with zero room for error, run with the production crew and the admin team.</li>
+            <li>Stage-managed a sold-out arena: broadcast cues, team walk-ins and the awarding ceremony.</li>
           </ul>
-          <div class="kpis"><div><b>3,000</b><span>seats, sold out</span></div><div><b>91.5K</b><span>peak online viewers (season)</span></div></div>
+          <div class="kpis"><div><b>3,000</b><span>seats, sold out</span></div><div><b>91.5K</b><span>peak online viewers</span></div></div>
         </div>
-        <div class="case-media"><img src="img/mpl-arena.jpg" alt="Malek on the arena floor during the MPL MENA Season 9 Grand Finals" style="object-position:60% 40%"></div>
+        <div class="case-media"><img src="img/mpl-floor.jpg" alt="Malek on the arena floor during the MPL Season 9 Grand Finals" style="object-position:50% 30%"></div>
       </article>
 
       <article class="case">
         <div class="case-body">
-          <span class="mono" style="color:var(--dim)">3 days · Egypt International Exhibition Center</span>
+          <span class="yr">2026 · Egypt International Exhibition Center</span>
           <h3>Connecta Play @ Cairo ICT</h3>
-          <div class="meta"><span class="chip role">Operations lead</span><span class="chip">Gaming zone</span></div>
+          <div class="meta"><span class="chip role">Operations lead</span></div>
           <ul>
-            <li>Ran operations for the gaming and esports zone inside Connecta, Cairo ICT's student and youth area.</li>
-            <li>Three straight days of tournaments with prizes every day, on a trade-show floor.</li>
-            <li>Kept a heavy daily flow of students and young gamers moving through the zone.</li>
+            <li>Ran the gaming zone at Connecta: three straight days of tournaments on a trade-show floor.</li>
+            <li>When trucks ran short at load-in, I found and hired extra drivers on the spot within an hour.</li>
           </ul>
-          <div class="kpis"><div><b>3</b><span>show days</span></div><div><b>121K+</b><span>Connecta visitors (2026)</span></div></div>
+          <div class="kpis"><div><b>3</b><span>show days</span></div><div><b>121K+</b><span>Connecta visitors</span></div></div>
         </div>
-        <div class="case-media text"><b>Connecta</b><span>Play · Cairo ICT · 3 days</span></div>
+        <div class="case-media"><img src="img/leaderboard-side.jpg" alt="Malek on comms in front of the Connecta Play leaderboard"></div>
       </article>
 
       <article class="case flip">
         <div class="case-body">
-          <span class="mono" style="color:var(--dim)">Egypt International Exhibition Center</span>
+          <span class="yr">2026 · Egypt International Exhibition Center</span>
           <h3>Insomnia Egypt: three booths</h3>
-          <div class="meta"><span class="chip role">Operations lead</span><span class="chip">Red Bull</span><span class="chip">Vodafone</span></div>
+          <div class="meta"><span class="chip role">Operations lead</span><span class="chip"><img class="lg" src="img/logos/redbull.svg" alt="">Red Bull</span><span class="chip"><img class="lg" src="img/logos/vodafone.svg" alt="">Vodafone</span></div>
           <ul>
-            <li>Ran operations for three booths at Egypt's longest-running gaming festival at the same time.</li>
-            <li><strong>Red Bull Gaming Ground</strong>, the <strong>Vodafone</strong> booth, and <strong>Red Bull Hattrick</strong>.</li>
-            <li>Separate crews, schedules and brand rules for each booth, on one show floor.</li>
+            <li>Ran Red Bull Gaming Ground, the Vodafone booth and Red Bull Hattrick at the same time.</li>
           </ul>
           <div class="kpis"><div><b>3</b><span>booths at once</span></div><div><b>3</b><span>show days</span></div><div><b>25K+</b><span>festival visitors</span></div></div>
         </div>
-        <div class="case-media"><img src="img/insomnia.jpg" alt="Malek at the Red Bull Gaming Ground booth, Insomnia Egypt" style="object-position:50% 45%"></div>
+        <div class="case-media"><img src="img/insomnia-crew.jpg" alt="The Red Bull Gaming Ground crew at Insomnia Egypt 2026"><div class="brandbar"><span><img class="lg" src="img/logos/redbull.svg" alt="">Red Bull</span><span><img class="lg" src="img/logos/vodafone.svg" alt="">Vodafone</span></div></div>
       </article>
 
       <article class="case">
         <div class="case-body">
-          <span class="mono" style="color:var(--dim)">2026 · One Golden Square, New Cairo</span>
+          <span class="yr">2026 · One Golden Square, New Cairo</span>
           <h3>QABDA, fighting games</h3>
-          <div class="meta"><span class="chip role">Campaign operations</span><span class="chip">Booth roadshow</span></div>
+          <div class="meta"><span class="chip role">Tournament supervision</span><span class="chip">Booth roadshow</span></div>
           <ul>
-            <li>Ran the on-ground campaign for MENA's first fighting games event.</li>
-            <li>Took the QABDA booth on a roadshow through sports clubs and residential compounds, starting at Stone Park, to grow sign-ups: logistics, capacity and on-site flow.</li>
-            <li>Tickets sold through Ticketsmarché; the Grand Finals covered five tournaments.</li>
+            <li>Supervised the tournaments at MENA's first fighting games festival.</li>
+            <li>Took the QABDA booth through sports clubs and compounds before the finals.</li>
           </ul>
-          <div class="kpis"><div><b>5</b><span>tournaments</span></div><div><b>100K EGP</b><span>prize pool</span></div><div><b>6</b><span>games incl. Tekken 8, SF6</span></div></div>
+          <div class="kpis"><div><b>5</b><span>tournaments</span></div><div><b>6</b><span>games incl. Tekken 8, SF6</span></div></div>
         </div>
-        <div class="case-media"><img src="img/qabda-champion.jpg" alt="Tekken champion lifting the trophy under confetti at the QABDA Grand Finals"></div>
+        <div class="case-media"><img src="img/qabda-champion.jpg" alt="Tekken champion lifting the trophy at the QABDA Grand Finals"></div>
       </article>
 
       <article class="case flip">
         <div class="case-body">
-          <span class="mono" style="color:var(--dim)">EA SPORTS FC · Universities across Egypt</span>
+          <span class="yr">2026 · Universities across Egypt</span>
           <h3>Red Bull Wings Cup</h3>
-          <div class="meta"><span class="chip role">Operations lead</span><span class="chip">University tour</span><span class="chip">National final</span></div>
+          <div class="meta"><span class="chip role">Operations lead</span><span class="chip"><img class="lg" src="img/logos/ea.svg" alt="">EA SPORTS FC</span></div>
           <ul>
-            <li>Ran the university tour with two booth formats, small and big, on campuses.</li>
-            <li>Ran operations for the Egypt national final, which sends its winner toward the World Final in Miami.</li>
-            <li>A global Red Bull format running in nearly 80 countries.</li>
+            <li>Ran a caravan across 18 universities in different governorates, then the national final.</li>
           </ul>
-          <div class="kpis"><div><b>2</b><span>booth formats</span></div><div><b>~80</b><span>countries worldwide</span></div></div>
+          <div class="kpis"><div><b>18</b><span>universities</span></div><div><b>2</b><span>booth formats</span></div></div>
         </div>
-        <div class="case-media"><img src="img/wings-team.jpg" alt="Red Bull Wings Cup crew and players on stage with the trophy" style="object-position:50% 40%"></div>
+        <div class="case-media"><img src="img/wings-team.jpg" alt="Red Bull Wings Cup crew and players on stage" style="object-position:50% 40%"></div>
       </article>
 
-    </div>
-  </div>
-</section>
-
-<section id="field">
-  <div class="wrap">
-    <span class="cue mono">Cue 04 · From the field</span>
-    <h2>When the trucks don't show.</h2>
-    <div class="story">
-      <div class="story-photo"><img src="img/leaderboard-side.jpg" alt="Malek on comms during a live show"></div>
-      <div class="story-body">
-        <span class="mono" style="color:var(--pink)">Load-in day</span>
-        <h3 style="margin-top:10px">One hour to fix a logistics gap</h3>
-        <div class="sar">
-          <div><span class="mono">Situation</span><p>On load-in day we were short of transport trucks, and the setup schedule was at risk.</p></div>
-          <div><span class="mono">Action</span><p>I went to the nearest transport stand, found out where the truck drivers gather, collected numbers and hired drivers on the spot.</p></div>
-          <div><span class="mono">Result</span><p><strong>Extra trucks on site within one hour.</strong> Load-in stayed on schedule and the show opened on time.</p></div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <section id="more">
   <div class="wrap">
-    <span class="cue mono">Cue 05 · More work</span>
-    <h2>Tournaments, activations, venues.</h2>
+    <span class="cue mono">Cue 04</span>
+    <h2>Activations, organizing and more.</h2>
+    <p class="lead-line"><b>150+</b> people led on the largest event</p>
     <div class="grid4">
-      <div class="col">
-        <span class="mono">Tournaments</span><h3>Competitive play</h3>
-        <div class="item"><b>Intel Arabian Cup (IAC)</b><span>Regional operations for MEA's official League of Legends tournament.</span></div>
-        <div class="item"><b>Red Bull Campus Clutch</b><span>Valorant qualifiers across campuses, through to the National Finals.</span></div>
-        <div class="item"><b>Red Bull Home Ground &amp; Solo Q</b><span>Tournament logistics, player compliance and match flow.</span></div>
-        <div class="item"><b>Orange FC Championship 2025</b><span>Egypt leg of Orange's EA SPORTS FC competition, run in 15 African countries.</span></div>
-      </div>
-      <div class="col">
+      <div class="col feature">
         <span class="mono">Brand activations</span><h3>Booths &amp; community</h3>
-        <div class="item"><b>Samsung × Call of Duty</b><span>Activation across two booths.</span></div>
-        <div class="item"><b>VALORANT PC Café activations</b><span>Riot Games community events in gaming cafés.</span></div>
-        <div class="item"><b>LoL Worlds watch party</b><span>Ran operations for the League of Legends Worlds watch party at the MUST University theatre.</span></div>
-        <div class="item"><b>KFC Chicken Wingers</b><span>A food-brand gaming activation. I ran operations and directed the live stream.</span></div>
-        <div class="item"><b>PUBG Mobile: Best Duo &amp; Chaos Duo</b><span>Mass-participation community events with on-ground crowd management.</span></div>
-        <div class="item"><b>Red Bull Login 2024</b><span>Ran on-ground operations across the PC Verse and Arcade Verse zones: the admin team, live bottlenecks and attendee app issues.</span></div>
-        <div class="item"><b>Red Bull Tetris, 3arka, ProSeed</b><span>A year-round calendar, from casual play to fighting-game and amateur leagues.</span></div>
+        <div class="items">
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/redbull.svg" alt=""></span><b>Red Bull Gaming Ground</b><i>2026</i></div>
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/samsung.svg" alt="" data-wm></span><b>Samsung × Call of Duty</b><i>2026</i></div>
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/valorant.svg" alt=""></span><b>VALORANT PC Café activations</b><i>2026</i></div>
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/leagueoflegends.svg" alt=""></span><b>LoL Worlds watch party, MUST</b><i>2026</i></div>
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/redbull.svg" alt=""></span><b>Red Bull Login</b><i>2024</i></div>
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/kfc.svg" alt=""></span><b>KFC Chicken Wingers</b><i></i></div>
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/pubg.svg" alt=""></span><b>PUBG Best Duo &amp; Chaos Duo</b><i></i></div>
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/redbull.svg" alt=""></span><b>Red Bull Hattrick</b><i>2026</i></div>
+          <div class="item"><span class="ic"><img class="lg" src="img/logos/vodafone.svg" alt=""></span><b>Vodafone × Insomnia</b><i>2026</i></div>
+        </div>
       </div>
       <div class="col">
-        <span class="mono">Production</span><h3>Broadcast &amp; content</h3>
-        <div class="item"><b>Stream Director: KFC Chicken Wingers &amp; more</b><span>Directed the live stream: camera calls, graphics and timing, on several projects.</span></div>
-        <div class="item"><b>Broadcast data operator: Riot Games &amp; PUBG streams</b><span>Live stats and data entry on air, where one wrong number shows on screen.</span></div>
-        <div class="item"><b>The Blind Pick Show</b><span>Production workflows between talent, tech and crew.</span></div>
-        <div class="item"><b>ARC: Arabian Regional Cup stream</b><span>Hands-on in the control room for the League of Legends ARC broadcast.</span></div>
+        <span class="mono">Organizing</span><h3>Tournaments</h3>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/intel.svg" alt="" data-wm></span><b>Intel Arabian Cup</b><i>2022</i></div>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/valorant.svg" alt=""></span><b>Red Bull Campus Clutch</b><i>2022</i></div>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/redbull.svg" alt=""></span><b>Red Bull Solo Q</b><i>2024–25</i></div>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/redbull.svg" alt=""></span><b>Red Bull ProSeed</b><i>2024</i></div>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/redbull.svg" alt=""></span><b>Red Bull Home Ground</b><i>2025</i></div>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/redbull.svg" alt=""></span><b>Red Bull 3arka &amp; Tetris</b><i>2024–25</i></div>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/orange.svg" alt=""></span><b>Orange FC Championship</b><i>2025</i></div>
       </div>
       <div class="col">
-        <span class="mono">Venues &amp; systems</span><h3>Things I built</h3>
-        <div class="item"><b>Scenario-based recruitment system</b><span>Designed the hiring process for the Operations team: better hires and shorter onboarding.</span></div>
-        <div class="item"><b>GL Arena</b><span>Daily venue operations: equipment maintenance and customer service.</span></div>
-        <div class="item"><b>Warpros</b><span>Operations setup for the competitive platform: user journey and brackets.</span></div>
+        <span class="mono">Production &amp; systems</span><h3>Broadcast &amp; more</h3>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/leagueoflegends.svg" alt=""></span><b>ARC stream, Arabian Regional Cup</b><i>2026</i></div>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/kfc.svg" alt=""></span><b>Stream director, Chicken Wingers</b><i></i></div>
+        <div class="item"><span class="ic"><img class="lg" src="img/logos/riotgames.svg" alt=""></span><b>Data operator, Riot &amp; PUBG streams</b><i></i></div>
+        <div class="item"><span class="ic">GL</span><b>The Blind Pick Show</b><i></i></div>
+        <div class="item"><span class="ic">GL</span><b>GL Arena venue operations</b><i>2024</i></div>
+        <div class="item"><span class="ic">WP</span><b>Warpros platform setup</b><i>2025</i></div>
+        <div class="item"><span class="ic">HR</span><b>Scenario-based recruitment system</b><i></i></div>
       </div>
     </div>
   </div>
@@ -478,63 +439,32 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <section id="camera">
   <div class="wrap">
-    <span class="cue mono">Cue 06 · On camera</span>
+    <span class="cue mono">Cue 05</span>
     <h2>I can hold the mic too.</h2>
     <div class="camera">
-      <div class="cam"><div class="cam-img"><img src="img/host-sonaa.jpg" alt="Malek hosting صناع الفوضى on set"></div><span class="mono">Host · Ramadan 2026</span><h3><span class="ar">صناع الفوضى</span></h3><p>Hosted Riot Games' Ramadan show on Twitch: ARAM Mayhem with guest players.</p></div>
-      <div class="cam"><div class="cam-img"><img src="img/egycon-mc.jpg" alt="Malek MCing on the Egycon stage" style="object-position:50% 45%"></div><span class="mono">MC · 2024 – now</span><h3>Egycon</h3><p>Master of Ceremonies for Egypt's pop-culture and gaming convention.</p></div>
-      <div class="cam"><div class="cam-img"><img src="img/midterm.jpg" alt="ESS stage as seen in the TV series Midterm" style="object-position:30% 50%"></div><span class="mono">On screen</span><h3><em>Midterm</em> (TV)</h3><p>The ESS stage we built was used as a filming location for the TV drama.</p></div>
+      <div class="cam"><div class="cam-img"><img src="img/host-sonaa.jpg" alt="Malek hosting صناع الفوضى on set"></div><span class="mono">Host · 2026</span><h3><span class="ar">صناع الفوضى</span></h3></div>
+      <div class="cam"><div class="cam-img"><img src="img/egycon-mc.jpg" alt="Malek MCing on the Egycon stage" style="object-position:50% 45%"></div><span class="mono">MC · 2024 – now</span><h3>Egycon</h3></div>
+      <div class="cam"><div class="cam-img"><img src="img/midterm.jpg" alt="ESS stage as seen in the TV series Midterm" style="object-position:30% 50%"></div><span class="mono">On screen · 2026</span><h3><em>Midterm</em> (TV)</h3></div>
     </div>
   </div>
 </section>
 
 <section id="gallery">
   <div class="wrap">
-    <span class="cue mono">Cue 07 · Gallery</span>
+    <span class="cue mono">Cue 06</span>
     <h2>Behind the screens.</h2>
     <div class="gallery">
-      <figure class="g-wide g-tall"><img src="img/control-broadcast.jpg" alt="Malek at the control desk during the LoL Worlds watch party at MUST University theatre"><figcaption>LoL Worlds watch party, MUST theatre</figcaption></figure>
-      <figure class="g-wide"><img src="img/insomnia-crew.jpg" alt="The Red Bull Gaming Ground crew at Insomnia Egypt 2026"><figcaption>Red Bull Gaming Ground crew, Insomnia 2026</figcaption></figure>
+      <figure class="g-wide g-tall"><img src="img/control-broadcast.jpg" alt="Malek at the control desk during the ARC League of Legends stream"><figcaption>ARC stream, control desk</figcaption></figure>
+      <figure class="g-wide"><img src="img/insomnia.jpg" alt="Malek at Red Bull Gaming Ground, Insomnia 2026" style="object-position:50% 35%"><figcaption>Red Bull Gaming Ground, Insomnia 2026</figcaption></figure>
       <figure class="g-wide"><img src="img/redbull-login.jpg" alt="Crowd at Red Bull Login 2024"><figcaption>Red Bull Login 2024</figcaption></figure>
       <figure class="g-tall"><img src="img/qabda-booth.jpg" alt="Malek at the QABDA activation booth"><figcaption>QABDA booth roadshow</figcaption></figure>
-      <figure class="g-wide"><img src="img/mpl-floor.jpg" alt="Malek on the arena floor at the MPL MENA Season 9 Grand Finals" style="object-position:50% 30%"><figcaption>MPL MENA S9, arena floor</figcaption></figure>
+      <figure class="g-wide"><img src="img/hero-leaderboard.jpg" alt="Malek on comms at Connecta Play" style="object-position:50% 40%"><figcaption>Connecta Play 2026</figcaption></figure>
       <figure class="g-tall"><img src="img/wings-sofa.jpg" alt="Red Bull Wings Cup set" style="object-position:50% 35%"><figcaption>Red Bull Wings Cup</figcaption></figure>
       <figure class="g-wide"><img src="img/qabda-crowd.jpg" alt="Crowd cheering at the QABDA Grand Finals"><figcaption>QABDA Grand Finals crowd</figcaption></figure>
-      <figure class="g-wide"><img src="img/lol-team.jpg" alt="Fans and crew at the LoL Worlds watch party, MUST University theatre"><figcaption>LoL Worlds watch party, MUST theatre</figcaption></figure>
-      <figure class="g-tall"><img src="img/crowd-queue.jpg" alt="Malek on comms in front of the entry queue at the LoL Worlds watch party"><figcaption>Watch party entry queue</figcaption></figure>
-      <figure class="g-wide"><img src="img/control-lol-1.jpg" alt="Control room during the Arabian Regional Cup League of Legends stream"><figcaption>ARC stream, control room</figcaption></figure>
-      <figure class="g-tall"><img src="img/control-draft.jpg" alt="Team draft screen on the Arabian Regional Cup broadcast"><figcaption>ARC stream, draft &amp; graphics</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section id="path">
-  <div class="wrap">
-    <span class="cue mono">Cue 08 · Career path</span>
-    <h2>How I got here.</h2>
-    <div class="timeline">
-      <div class="t"><span class="mono">2018 – 2020</span><h3>Co-Founder</h3><p>Atlas Coworking Space. Built and ran the business from day one.</p></div>
-      <div class="t"><span class="mono">2022 – now</span><h3>Senior Operations Executive</h3><p>FWZ (Gamers Lounge), Cairo. Hybrid.</p></div>
-      <div class="t"><span class="mono">2024 – now</span><h3>Master of Ceremonies</h3><p>Egycon, freelance.</p></div>
-      <div class="t"><span class="mono">2025</span><h3>Project Manager</h3><p>FWZ, an eight-month PM role alongside operations.</p></div>
-      <div class="t"><span class="mono">2026</span><h3>Arena shows</h3><p>MPL MENA S9 Finals and ESS 2026, as operations lead and stage manager.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <span class="cue mono">Cue 09 · Toolkit</span>
-    <h2>Skills &amp; languages.</h2>
-    <div class="skills">
-      <div class="pills">
-        <span>Event &amp; esports operations</span><span>Stage management</span><span>Run-of-show</span><span>Vendor coordination</span><span>Crowd control</span><span>Team leadership (10–120)</span><span>Venue management</span><span>Process optimization</span><span>KPI &amp; performance management</span><span>Financial operations</span><span>Crisis management</span><span>ERP</span><span>MS Office &amp; Google Workspace</span><span>Project management tools</span><span>Hospitality coordination</span><span>Stream directing</span><span>Live broadcast data</span>
-      </div>
-      <div class="langs">
-        <div><b>Arabic</b><span>Native</span></div>
-        <div><b>English</b><span>B2</span></div>
-        <div><b>German</b><span>B2</span></div>
-      </div>
+      <figure class="g-wide"><img src="img/lol-team.jpg" alt="Fans and crew at the LoL Worlds watch party, MUST theatre"><figcaption>LoL Worlds watch party, MUST</figcaption></figure>
+      <figure class="g-tall"><img src="img/crowd-queue.jpg" alt="Entry queue at the LoL Worlds watch party"><figcaption>Watch party entry queue</figcaption></figure>
+      <figure class="g-wide"><img src="img/control-lol-1.jpg" alt="Control room during the ARC League of Legends stream"><figcaption>ARC stream, control room</figcaption></figure>
+      <figure class="g-tall"><img src="img/control-draft.jpg" alt="Team draft screen on the ARC broadcast"><figcaption>ARC draft &amp; graphics</figcaption></figure>
     </div>
   </div>
 </section>
@@ -543,14 +473,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap">
     <span class="cue mono">Final cue</span>
     <h2>Let's run your next show.</h2>
-    <p class="lead">Open to operations and stage-management roles across esports, gaming and live events.</p>
-    <div class="cta">
-      <a class="btn" href="mailto:ra3d21000@gmail.com">ra3d21000@gmail.com</a>
-      <a class="btn ghost" href="tel:+201064665480">+20 106 466 5480</a>
-      <a class="btn ghost" href="https://wa.me/201064665480" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/malek-gamal-091933367/" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="contact-big">
+      <a href="tel:+201064665480"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+20 106 466 5480</a>
+      <a href="mailto:ra3d21000@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>ra3d21000@gmail.com</a>
+      <a href="https://wa.me/201064665480" target="_blank" rel="noopener" class="no-print"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+      <a href="https://www.linkedin.com/in/malek-gamal-091933367/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 10v7"/></svg>linkedin.com/in/malek-gamal-091933367</a>
     </div>
-    <p class="mono" style="color:var(--muted);margin-top:24px">Cairo, Egypt</p>
+    <div class="facts"><span>Born July 1997</span><span>Cairo, Egypt</span></div>
   </div>
 </section>
 
