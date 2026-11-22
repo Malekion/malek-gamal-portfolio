@@ -73,17 +73,23 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .stat b{display:block;font-family:var(--head);font-size:clamp(36px,4vw,52px);line-height:1;color:var(--cyan)}
 .stat:nth-child(even) b{color:var(--pink)}
 .stat span{display:block;color:var(--muted);font-size:15px;margin-top:10px}
-.clients-title{font-family:var(--head);font-size:22px;margin:44px 0 18px}
-.clients{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.client{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:104px;border:1px solid var(--line);border-radius:14px;background:var(--bg2)}
-.client img{height:36px;width:auto;filter:invert(1);opacity:.9}
-.client img[src*="redbull"],.client img[src*="kfc"]{height:50px;margin:-7px 0}
-.client img[data-wm]{height:72px;margin:-18px 0}
 .ic .lg[data-wm]{height:28px}
 .chip .lg[data-wm]{height:26px;margin:-6px 0}
-.client b{font-family:var(--head);font-weight:700;font-size:20px;letter-spacing:-.01em;color:#e3e6ef}
-.client small{font-size:12px;color:var(--dim)}
-.note{color:var(--dim);font-size:12.5px;margin-top:14px}
+.clients-title{font-family:var(--head);font-size:22px;margin:44px 0 18px}
+.brands{display:grid;gap:14px}
+.mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-t{display:flex;width:max-content;animation:mq 60s linear infinite}
+.mq-t.rev{animation-direction:reverse;animation-duration:68s}
+.mq:hover .mq-t{animation-play-state:paused}
+.mq-g{display:flex;gap:14px;padding-right:14px}
+.br{display:inline-flex;align-items:center;gap:12px;padding:8px 18px 8px 8px;border:1px solid var(--line);border-radius:18px;background:var(--bg2);font-family:var(--head);font-weight:600;font-size:16px;white-space:nowrap}
+.bt{width:52px;height:52px;border-radius:15px;display:flex;align-items:center;justify-content:center;flex:none}
+.bt img{width:30px;height:30px;filter:brightness(0) invert(1)}
+.bt img.w{width:46px;height:46px}
+.bt b{font-family:var(--head);font-weight:700;font-size:16px;color:#fff;letter-spacing:-.02em}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-t{animation:none}}
+
 
 /* what */
 .what{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
@@ -129,8 +135,9 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .col h3{font-size:22px;margin:6px 0 10px}
 .col .mono{color:var(--cyan)}
 .item{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
-.item .ic{width:30px;height:30px;flex:none;border-radius:8px;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:700;font-size:12px;color:#c9cede}
-.item .ic .lg{height:16px;opacity:.95}
+.item .ic{width:42px;height:42px;flex:none;border-radius:8px;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:700;font-size:12px;color:#c9cede}
+.item .ic .lg{height:26px;opacity:.95}
+.item .ic .lg[data-wm]{height:40px}
 .item b{font-weight:600;font-size:15px;flex:1}
 .item i{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--dim)}
 
@@ -165,8 +172,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .case.flip .case-body{order:0}
   .case-media{min-height:260px}
   .stats{grid-template-columns:repeat(2,1fr)}
-  .clients{grid-template-columns:repeat(3,1fr)}
-  .camera{grid-template-columns:1fr 1fr}
+    .camera{grid-template-columns:1fr 1fr}
   .grid4{grid-template-columns:1fr}
   .col.feature{grid-column:auto}
   .col.feature .items{grid-template-columns:1fr}
@@ -195,9 +201,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .hero .wrap{width:100%}
   .hero-photo{aspect-ratio:auto;height:680px}
   .wrap{max-width:1320px;padding:0 64px}
-  .clients-title{margin:28px 0 14px}
-  .client{height:88px}
-  .what-photo{aspect-ratio:auto;height:640px}
+      .what-photo{aspect-ratio:auto;height:640px}
   .case{break-inside:avoid;break-before:page;height:690px}
   .cases{gap:0;margin-top:20px}
   .cases .case:first-child{break-before:auto;height:540px}
@@ -207,7 +211,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .item{padding:5px 0}
   #more .col h3{display:none}
   #more .col .mono{display:block;margin-bottom:6px}
-  .item .ic{width:26px;height:26px}
+  .item .ic{width:24px;height:24px;border-radius:6px}
+  .item .ic .lg{height:16px}
+  .item .ic .lg[data-wm]{height:24px}
+  #more .col{padding:14px 18px}
+  #more .item{padding:4px 0;gap:10px}
+  #more .item b{font-size:14px}
+  #more .lead-line{margin:0 0 10px}
+  .bt img.w{width:30px;height:30px}
+  .mq{-webkit-mask-image:none;mask-image:none}
+  .mq-t{animation:none;width:auto}
+  .mq-g{flex-wrap:wrap;gap:10px;padding:0}
+  .mq-g[aria-hidden]{display:none}
+  .br{font-size:12px;padding:4px 10px 4px 4px;gap:7px;border-radius:12px}
+  .bt{width:28px;height:28px;border-radius:8px}
+  .bt img{width:17px;height:17px}
+  .mq-g{gap:8px!important}
+  .clients-title{margin:18px 0 10px;font-size:18px}
+  #numbers h2{margin:6px 0 12px}
+  .stat{padding:12px 22px}
+  .stat b{font-size:34px}
+  .stat span{margin-top:6px;font-size:13px}
+  #numbers{padding:30px 0}
+  .brands{gap:8px}
+  .bt b{font-size:11px}
   .lead-line{margin:0 0 16px}
   #more h2,#gallery h2{margin:6px 0 4px}
   #more{padding:28px 0}
@@ -256,29 +283,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <span class="cue mono">Cue 01</span>
     <h2>Numbers talk.</h2>
     <div class="stats">
-      <div class="stat"><b>4+ yrs</b><span>Delivering for the brands below</span></div>
+      <div class="stat"><b>4+ yrs</b><span>Working with the brands below</span></div>
       <div class="stat"><b>150+</b><span>People led on a single event</span></div>
       <div class="stat"><b>100+</b><span>People hired and staffed</span></div>
       <div class="stat"><b>25+</b><span>Events, tournaments and activations</span></div>
       <div class="stat"><b>11,000</b><span>Visitors at ESS 2026</span></div>
       <div class="stat"><b>3,000</b><span>Sold-out seats, MPL Season 9 Finals</span></div>
     </div>
-    <p class="clients-title">4+ years delivering for</p>
-    <div class="clients">
-      <div class="client"><img src="img/logos/redbull.svg" alt=""><small>Red Bull</small></div>
-      <div class="client"><img src="img/logos/riotgames.svg" alt=""><small>Riot Games</small></div>
-      <div class="client"><img src="img/logos/samsung.svg" alt="" data-wm><small>Samsung</small></div>
-      <div class="client"><img src="img/logos/vodafone.svg" alt=""><small>Vodafone</small></div>
-      <div class="client"><img src="img/logos/orange.svg" alt=""><small>Orange</small></div>
-      <div class="client"><img src="img/logos/intel.svg" alt="" data-wm><small>Intel</small></div>
-      <div class="client"><img src="img/logos/amd.svg" alt="" data-wm><small>AMD</small></div>
-      <div class="client"><img src="img/logos/pubg.svg" alt=""><small>PUBG · Krafton</small></div>
-      <div class="client"><b>Tencent</b><small>PUBG Mobile</small></div>
-      <div class="client"><b>MOONTON</b><small>Mobile Legends</small></div>
-      <div class="client"><img src="img/logos/kfc.svg" alt=""><small>KFC</small></div>
-      <div class="client"><img src="img/logos/activision.svg" alt="" data-wm><small>Call of Duty</small></div>
+    <p class="clients-title">4+ years working with</p>
+    <div class="brands">
+      <div class="mq"><div class="mq-t"><div class="mq-g"><span class="br"><span class="bt" style="background:#DB0A40"><img src="img/logos/redbull.svg" alt=""></span>Red Bull</span><span class="br"><span class="bt" style="background:#EB0029"><img src="img/logos/riotgames.svg" alt=""></span>Riot Games</span><span class="br"><span class="bt" style="background:#1428A0"><img src="img/logos/samsung.svg" alt="" class="w"></span>Samsung</span><span class="br"><span class="bt" style="background:#E60000"><img src="img/logos/vodafone.svg" alt=""></span>Vodafone</span><span class="br"><span class="bt" style="background:#FF7900"><img src="img/logos/orange.svg" alt=""></span>Orange</span><span class="br"><span class="bt" style="background:#0071C5"><img src="img/logos/intel.svg" alt="" class="w"></span>Intel</span><span class="br"><span class="bt" style="background:#1a1a1a"><img src="img/logos/amd.svg" alt="" class="w"></span>AMD</span><span class="br"><span class="bt" style="background:#F4B942"><img src="img/logos/pubg.svg" alt=""></span>PUBG</span><span class="br"><span class="bt" style="background:#0052D9"><b>T</b></span>Tencent</span><span class="br"><span class="bt" style="background:#1C6DD0"><b>M</b></span>Moonton</span><span class="br"><span class="bt" style="background:#F40027"><img src="img/logos/kfc.svg" alt=""></span>KFC</span><span class="br"><span class="bt" style="background:#111"><b>iX</b></span>Infinix</span><span class="br"><span class="bt" style="background:#76B900"><img src="img/logos/nvidia.svg" alt=""></span>NVIDIA</span><span class="br"><span class="bt" style="background:#1a1a1a"><img src="img/logos/asus.svg" alt="" class="w"></span>ASUS</span><span class="br"><span class="bt" style="background:#E2231A"><img src="img/logos/lenovo.svg" alt=""></span>Lenovo</span><span class="br"><span class="bt" style="background:#d10000"><img src="img/logos/msi.svg" alt=""></span>MSI</span><span class="br"><span class="bt" style="background:#F26B1D"><b>G</b></span>Gigabyte</span><span class="br"><span class="bt" style="background:#111"><img src="img/logos/razer.svg" alt=""></span>Razer</span></div><div class="mq-g" aria-hidden="true"><span class="br"><span class="bt" style="background:#DB0A40"><img src="img/logos/redbull.svg" alt=""></span>Red Bull</span><span class="br"><span class="bt" style="background:#EB0029"><img src="img/logos/riotgames.svg" alt=""></span>Riot Games</span><span class="br"><span class="bt" style="background:#1428A0"><img src="img/logos/samsung.svg" alt="" class="w"></span>Samsung</span><span class="br"><span class="bt" style="background:#E60000"><img src="img/logos/vodafone.svg" alt=""></span>Vodafone</span><span class="br"><span class="bt" style="background:#FF7900"><img src="img/logos/orange.svg" alt=""></span>Orange</span><span class="br"><span class="bt" style="background:#0071C5"><img src="img/logos/intel.svg" alt="" class="w"></span>Intel</span><span class="br"><span class="bt" style="background:#1a1a1a"><img src="img/logos/amd.svg" alt="" class="w"></span>AMD</span><span class="br"><span class="bt" style="background:#F4B942"><img src="img/logos/pubg.svg" alt=""></span>PUBG</span><span class="br"><span class="bt" style="background:#0052D9"><b>T</b></span>Tencent</span><span class="br"><span class="bt" style="background:#1C6DD0"><b>M</b></span>Moonton</span><span class="br"><span class="bt" style="background:#F40027"><img src="img/logos/kfc.svg" alt=""></span>KFC</span><span class="br"><span class="bt" style="background:#111"><b>iX</b></span>Infinix</span><span class="br"><span class="bt" style="background:#76B900"><img src="img/logos/nvidia.svg" alt=""></span>NVIDIA</span><span class="br"><span class="bt" style="background:#1a1a1a"><img src="img/logos/asus.svg" alt="" class="w"></span>ASUS</span><span class="br"><span class="bt" style="background:#E2231A"><img src="img/logos/lenovo.svg" alt=""></span>Lenovo</span><span class="br"><span class="bt" style="background:#d10000"><img src="img/logos/msi.svg" alt=""></span>MSI</span><span class="br"><span class="bt" style="background:#F26B1D"><b>G</b></span>Gigabyte</span><span class="br"><span class="bt" style="background:#111"><img src="img/logos/razer.svg" alt=""></span>Razer</span></div></div></div>
+      <div class="mq"><div class="mq-t rev"><div class="mq-g"><span class="br"><span class="bt" style="background:#1ED760"><img src="img/logos/spotify.svg" alt=""></span>Spotify</span><span class="br"><span class="bt" style="background:#111"><img src="img/logos/tiktok.svg" alt=""></span>TikTok</span><span class="br"><span class="bt" style="background:#FF9900"><img src="img/logos/amazon.svg" alt=""></span>Amazon</span><span class="br"><span class="bt" style="background:#F68B1E"><b>J</b></span>Jumia</span><span class="br"><span class="bt" style="background:#E00800"><b>e&</b></span>e& Etisalat</span><span class="br"><span class="bt" style="background:#4B2582"><b>IP</b></span>InstaPay</span><span class="br"><span class="bt" style="background:#007DB8"><img src="img/logos/dell.svg" alt="" class="w"></span>Dell</span><span class="br"><span class="bt" style="background:#0096D6"><img src="img/logos/hp.svg" alt=""></span>HP</span><span class="br"><span class="bt" style="background:#DA291C"><img src="img/logos/mcdonalds.svg" alt=""></span>McDonald's</span><span class="br"><span class="bt" style="background:#D2232A"><b>H</b></span>Hardee's</span><span class="br"><span class="bt" style="background:#111"><img src="img/logos/ubisoft.svg" alt=""></span>Ubisoft</span><span class="br"><span class="bt" style="background:#0A5FD6"><b>IGG</b></span>IGG</span><span class="br"><span class="bt" style="background:#6B1FBF"><img src="img/logos/coolermaster.svg" alt=""></span>Cooler Master</span><span class="br"><span class="bt" style="background:#111"><b>Tt</b></span>Thermaltake</span><span class="br"><span class="bt" style="background:#5F3C8F"><b>BQ</b></span>BenQ</span><span class="br"><span class="bt" style="background:#C8102E"><b>AOC</b></span>AOC</span><span class="br"><span class="bt" style="background:#E60012"><b>XPG</b></span>XPG</span><span class="br"><span class="bt" style="background:#7B2BF9"><b>C</b></span>Codashop</span><span class="br"><span class="bt" style="background:#1A73E8"><b>BS</b></span>BlueStacks</span><span class="br"><span class="bt" style="background:#B88A2E"><b>OGS</b></span>One Golden Square</span></div><div class="mq-g" aria-hidden="true"><span class="br"><span class="bt" style="background:#1ED760"><img src="img/logos/spotify.svg" alt=""></span>Spotify</span><span class="br"><span class="bt" style="background:#111"><img src="img/logos/tiktok.svg" alt=""></span>TikTok</span><span class="br"><span class="bt" style="background:#FF9900"><img src="img/logos/amazon.svg" alt=""></span>Amazon</span><span class="br"><span class="bt" style="background:#F68B1E"><b>J</b></span>Jumia</span><span class="br"><span class="bt" style="background:#E00800"><b>e&</b></span>e& Etisalat</span><span class="br"><span class="bt" style="background:#4B2582"><b>IP</b></span>InstaPay</span><span class="br"><span class="bt" style="background:#007DB8"><img src="img/logos/dell.svg" alt="" class="w"></span>Dell</span><span class="br"><span class="bt" style="background:#0096D6"><img src="img/logos/hp.svg" alt=""></span>HP</span><span class="br"><span class="bt" style="background:#DA291C"><img src="img/logos/mcdonalds.svg" alt=""></span>McDonald's</span><span class="br"><span class="bt" style="background:#D2232A"><b>H</b></span>Hardee's</span><span class="br"><span class="bt" style="background:#111"><img src="img/logos/ubisoft.svg" alt=""></span>Ubisoft</span><span class="br"><span class="bt" style="background:#0A5FD6"><b>IGG</b></span>IGG</span><span class="br"><span class="bt" style="background:#6B1FBF"><img src="img/logos/coolermaster.svg" alt=""></span>Cooler Master</span><span class="br"><span class="bt" style="background:#111"><b>Tt</b></span>Thermaltake</span><span class="br"><span class="bt" style="background:#5F3C8F"><b>BQ</b></span>BenQ</span><span class="br"><span class="bt" style="background:#C8102E"><b>AOC</b></span>AOC</span><span class="br"><span class="bt" style="background:#E60012"><b>XPG</b></span>XPG</span><span class="br"><span class="bt" style="background:#7B2BF9"><b>C</b></span>Codashop</span><span class="br"><span class="bt" style="background:#1A73E8"><b>BS</b></span>BlueStacks</span><span class="br"><span class="bt" style="background:#B88A2E"><b>OGS</b></span>One Golden Square</span></div></div></div>
     </div>
-    <p class="note">Event figures: organiser and press reports.</p>
   </div>
 </section>
 
@@ -296,7 +312,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <span>Vendor coordination</span><span>Run-of-show</span><span>Crowd control</span><span>Venue management</span>
           <span>Tournament supervision</span><span>Stream directing</span><span>Crisis management</span><span>Hospitality</span><span>Budgets</span><span>ERP</span>
         </div>
-        <p class="langs"><b>Arabic</b> native · <b>German</b> B2</p>
+        <p class="langs"><b>Arabic</b> native · <b>English</b> B2 · <b>German</b> B2</p>
       </div>
     </div>
   </div>
@@ -463,7 +479,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </section>
 
 <footer class="no-print">
-  <div class="wrap"><span>© 2026 Malek Gamal · Cairo, Egypt</span><span>Event figures: organiser &amp; press reports</span></div>
+  <div class="wrap"><span>© 2026 Malek Gamal · Cairo, Egypt</span></div>
 </footer>
 
 </body>
